@@ -12,10 +12,9 @@ function Slider() {
     const fetchImages = async () => {
       try {
         const response = await fetch(url);
-        console.log(url);
+
         const results = await response.json();
         SetImages(results);
-        console.log(results);
       } catch (err) {
         console.log(err);
         setError(err.toString());
