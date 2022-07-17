@@ -6,7 +6,7 @@ function Blogs() {
   const [query, setQuery] = useState("");
   const [blogs, setBlogs] = useState([]);
   const url = BASE_URL;
-
+  // query url kode : url + `?q=${query}`
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
