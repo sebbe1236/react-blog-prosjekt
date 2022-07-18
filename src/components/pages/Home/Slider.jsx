@@ -5,6 +5,7 @@ import { BASE_URL } from "../../constants/api";
 function Slider() {
   const [Images, SetImages] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const url = BASE_URL;
 
@@ -18,10 +19,20 @@ function Slider() {
       } catch (err) {
         console.log(err);
         setError(err.toString());
+      } finally {
+        setLoading(false);
       }
     };
     fetchImages();
   }, []);
+
+  if (loading) {
+    return <h3>Loading.....</h3>;
+  }
+
+  if (error) {
+    return <h3>An error occured</h3>;
+  }
 
   return (
     <>
