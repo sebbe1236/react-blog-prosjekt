@@ -42,6 +42,7 @@ function SingleBlog() {
       <Container>
         <div>
           <h3>{blog.title.rendered}</h3>
+          <p>{blog.content.rendered}</p>
         </div>
       </Container>
       ;
