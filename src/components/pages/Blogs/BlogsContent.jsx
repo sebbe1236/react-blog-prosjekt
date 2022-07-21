@@ -11,16 +11,12 @@ function BlogsContent({ data }) {
         <Row>
           {data.map((content) => {
             return (
-              <Col md="auto" key={content.id}>
+              <Col md="auto">
                 <Link to={`/blog/${content.id}`}>
-                  <Card style={{ width: "25rem" }}>
+                  <Card style={{ width: "25rem" }} key={content.id}>
                     <Card.Body>
-                      <Card.Title>{content.title.rendered}</Card.Title>
-                      <Card.Img
-                        variant="top"
-                        src={content._embedded["wp:featuredmedia"]["0"].source_url}
-                        alt="First slide"
-                      />
+                      <Card.Title>{content.name}</Card.Title>
+                      <Card.Img variant="top" src={content.img} alt="First slide" />
                     </Card.Body>
                   </Card>
                 </Link>
