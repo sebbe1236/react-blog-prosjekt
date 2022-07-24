@@ -15,11 +15,10 @@ function SingleBlog() {
   useEffect(() => {
     const singleFetch = async () => {
       try {
-        const response = await axios.get(`https://exam1api.sebbeprojects.com/wp-json/wp/v2/posts/${id}`);
-
-        const data = response.data;
-        console.log(data);
-        setBlog(data);
+        const response = await axios.get(`https://www.breakingbadapi.com/api/characters/${id}`);
+        const result = response.data;
+        console.log(result);
+        setBlog(result);
       } catch (error) {
         console.log(error.message);
         setError(error.toString());
@@ -41,11 +40,9 @@ function SingleBlog() {
     <>
       <Container>
         <div>
-          <h3>{blog.title.rendered}</h3>
-          <p>{blog.content.rendered}</p>
+          <h1>{blog.name}</h1>
         </div>
       </Container>
-      ;
     </>
   );
 }

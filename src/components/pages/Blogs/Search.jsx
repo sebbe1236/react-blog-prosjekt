@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //<input className="search" placeholder="search blogs" onChange={(e) => setSearchTerm(e.target.value)} />
 function Search({ getQuery }) {
   const [setSearch, setSearchTerm] = useState("");
