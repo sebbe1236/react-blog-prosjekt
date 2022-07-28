@@ -15,7 +15,7 @@ function SingleBlog() {
   useEffect(() => {
     const singleFetch = async () => {
       try {
-        const response = await axios.get(`https://www.breakingbadapi.com/api/characters/${id}`);
+        const response = await axios.get(url + `/${id}`);
         const result = response.data;
         console.log(result);
         setBlog(result);

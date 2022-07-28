@@ -12,7 +12,7 @@ function Slider() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch("https://www.breakingbadapi.com/api/characters?limit=10&offset=10");
+        const response = await fetch(url);
 
         const results = await response.json();
         console.log(results);
@@ -40,10 +40,14 @@ function Slider() {
       <Carousel>
         {Images.map((Slider) => {
           return (
-            <Carousel.Item key={Slider.char_id}>
-              <img className="d-block w-100" src={Slider.img} alt="First slide" />
+            <Carousel.Item key={Slider.id}>
+              <img
+                className="d-block w-100"
+                src={Slider._embedded["wp:featuredmedia"]["0"].source_url}
+                alt="First slide"
+              />
               <Carousel.Caption>
-                <h3>Favorite characters</h3>
+                <h3>Some of my adventures!</h3>
               </Carousel.Caption>
             </Carousel.Item>
           );
