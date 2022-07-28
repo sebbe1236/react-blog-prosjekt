@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
-import { isContentEditable } from "@testing-library/user-event/dist/utils";
+
 function BlogsContent({ data }) {
   return (
     <>
@@ -13,7 +13,7 @@ function BlogsContent({ data }) {
           {data.map((content) => {
             return (
               <Col md="auto" key={content.id}>
-                <Link to={`/blog/${content.char_id}`}>
+                <Link to={`/blog/${content.id}`}>
                   <Card style={{ width: "25rem" }}>
                     <Card.Body>
                       <Card.Title>{content.slug}</Card.Title>

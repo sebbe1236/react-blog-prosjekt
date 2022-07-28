@@ -15,9 +15,10 @@ function SingleBlog() {
   useEffect(() => {
     const singleFetch = async () => {
       try {
-        const response = await axios.get(url + `/${id}`);
+        const response = await axios.get(`https://exam1api.sebbeprojects.com/wp-json/wp/v2/posts/${id}`);
         const result = response.data;
         console.log(result);
+
         setBlog(result);
       } catch (error) {
         console.log(error.message);
@@ -40,7 +41,7 @@ function SingleBlog() {
     <>
       <Container>
         <div>
-          <h1>{blog.name}</h1>
+          <p>{blog.content.rendered}</p>
         </div>
       </Container>
     </>
