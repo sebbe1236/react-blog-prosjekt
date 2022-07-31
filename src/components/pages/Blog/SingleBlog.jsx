@@ -15,7 +15,7 @@ function SingleBlog() {
   useEffect(() => {
     const singleFetch = async () => {
       try {
-        const response = await axios.get(`https://exam1api.sebbeprojects.com/wp-json/wp/v2/posts/${id}`);
+        const response = await axios.get(`https://exam1api.sebbeprojects.com/wp-json/wp/v2/posts/${id}?_embed`);
         const result = response.data;
         console.log(result);
 
@@ -41,7 +41,8 @@ function SingleBlog() {
     <>
       <Container>
         <div>
-          <p>{blog.content.rendered}</p>
+          <h2>{blog.slug}</h2>
+          <img src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
         </div>
       </Container>
     </>
