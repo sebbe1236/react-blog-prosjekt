@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
 
@@ -39,11 +40,14 @@ function SingleBlog() {
 
   return (
     <>
-      <Container>
-        <div>
-          <h2>{blog.slug}</h2>
-          <img src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
-        </div>
+      <Container className="container-lg text-center">
+        <Col>
+          <h2>{blog.title.rendered}</h2>
+
+          <Image fluid src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
+          <h4>{blog.slug}</h4>
+          <p>{blog.content.rendered}</p>
+        </Col>
       </Container>
     </>
   );

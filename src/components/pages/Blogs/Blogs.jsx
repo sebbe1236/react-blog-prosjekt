@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogsContent from "./BlogsContent";
 import { BASE_URL } from "../../constants/api";
+import Heading from "../../layout/Header";
 
 // breaking bad api: `https://www.breakingbadapi.com/api/characters?name=${query}` search funker med den.
 //`https://www.breakingbadapi.com/api/characters?name=${query}`
@@ -45,7 +46,8 @@ function Blogs() {
 
   return (
     <>
-      <div>
+      <Heading heading="Blogs" />
+      <div className="searchbar_container">
         <input
           type="text"
           placeholder={"Search blogs"}

@@ -2,6 +2,22 @@
   height: 400px;
 }
 
-input {
+.searchbar_container {
   text-align: center;
+}
+
+.searchbar_container input {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+form div {
+  padding: 15px;
+}
+
+form span {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

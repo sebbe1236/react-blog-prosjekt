@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 function BlogsContent({ data }) {
   return (
     <>
-      <Container fluid>
+      <Container className="text-center container-lg">
         <Row>
           {data.map((content) => {
             return (
-              <Col md="auto" key={content.id}>
+              <Col key={content.id} className="m-3">
                 <Link to={`/blog/${content.id}`}>
-                  <Card style={{ width: "25rem" }}>
+                  <Card className="align-middle" style={{ width: "20rem" }}>
                     <Card.Body>
                       <Card.Title>{content.slug}</Card.Title>
                       <Card.Img
