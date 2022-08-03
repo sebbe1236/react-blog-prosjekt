@@ -7,6 +7,7 @@ import Blogs from "./components/pages/Blogs/Blogs";
 import SingleBlog from "./components/pages/Blog/SingleBlog";
 import Contact from "./components/pages/Contact/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/blog/:id" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

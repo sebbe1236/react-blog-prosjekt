@@ -20,4 +20,23 @@ form span {
   display: flex;
   flex-direction: column;
   font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  transition-font-size: 3em;
+  transition-color: black;
+}
+nav a:hover {
+  font-weight: bold;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  nav a {
+    padding: 0px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */
