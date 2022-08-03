@@ -8,27 +8,23 @@ import { Link } from "react-router-dom";
 function BlogsContent({ data }) {
   return (
     <>
-      <Container className="text-center container-lg">
-        <Row>
+      <Container className="text-center container-md">
+        <div className="blogs_container">
           {data.map((content) => {
             return (
-              <Col key={content.id} className="m-3">
+              <Col key={content.id} className="m-3 p-5">
                 <Link to={`/blog/${content.id}`}>
-                  <Card className="align-middle" style={{ width: "20rem" }}>
-                    <Card.Body>
-                      <Card.Title>{content.slug}</Card.Title>
-                      <Card.Img
-                        variant="top"
-                        src={content._embedded["wp:featuredmedia"]["0"].source_url}
-                        alt="First slide"
-                      />
-                    </Card.Body>
-                  </Card>
+                  <h4>{content.title.rendered}</h4>
+                  <img
+                    className="w-100"
+                    src={content._embedded["wp:featuredmedia"]["0"].source_url}
+                    alt="First slide"
+                  />
                 </Link>
               </Col>
             );
           })}
-        </Row>
+        </div>
       </Container>
     </>
   );

@@ -1,0 +1,5 @@
+@import "variables";
+
+.blog_image {
+  @include images;
+}

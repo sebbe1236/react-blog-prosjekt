@@ -40,11 +40,11 @@ function SingleBlog() {
 
   return (
     <>
-      <Container className="container-lg text-center">
+      <Container className="text-center">
         <Col>
           <h2>{blog.title.rendered}</h2>
 
-          <Image fluid src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
+          <img className="blog_image" src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
           <h4>{blog.slug}</h4>
           <p>{blog.content.rendered}</p>
         </Col>

@@ -1,4 +1,10 @@
+#root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 @import "partials/home";
 @import "partials/blogs";
 @import "partials/contact";
 @import "partials/header";
+@import "partials/singleblog";
+@import "partials/variables";

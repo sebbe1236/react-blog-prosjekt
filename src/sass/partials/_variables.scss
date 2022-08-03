@@ -1,0 +1,25 @@
+$theme-colors: (
+  Heading: black,
+  Buttons: rgb(12, 94, 12),
+  Warning: #ffc107,
+);
+
+@mixin images {
+  padding: 10;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@mixin nav {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  transition: {
+    font-size: 3em;
+    color: black;
+  }
+  &:hover {
+    font-weight: bold;
+    color: black;
+  }
+}

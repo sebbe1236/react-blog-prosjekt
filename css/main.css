@@ -1,3 +1,7 @@
+#root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .carousel-inner img {
   height: 400px;
 }
@@ -12,6 +16,24 @@
   text-align: center;
 }
 
+.blogs_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.blogs_container img {
+  padding: 10;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .blogs_container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 form div {
   padding: 15px;
 }
@@ -39,4 +61,9 @@ nav a:hover {
     padding: 0px;
     text-align: center;
   }
+}
+.blog_image {
+  padding: 10;
+  border-radius: 10px;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
