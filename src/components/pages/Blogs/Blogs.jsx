@@ -21,7 +21,7 @@ function Blogs() {
         const response = await fetch(url);
 
         const results = await response.json();
-        console.log(results);
+
         setBlogs(results);
       } catch (err) {
         console.log(err, "Funka ikkee");

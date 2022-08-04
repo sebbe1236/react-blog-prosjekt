@@ -15,7 +15,7 @@ function Slider() {
         const response = await fetch(url);
 
         const results = await response.json();
-        console.log(results);
+
         SetImages(results);
       } catch (err) {
         console.log(err);
