@@ -2,9 +2,31 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+}
+
 @import "partials/home";
 @import "partials/blogs";
 @import "partials/contact";
 @import "partials/header";
 @import "partials/singleblog";
+@import "partials/footer";
 @import "partials/variables";

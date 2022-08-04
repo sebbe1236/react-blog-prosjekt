@@ -11,7 +11,7 @@ function NavBar() {
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg">
         <Container fluid>
           <Navbar.Brand href="/">Blog site</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

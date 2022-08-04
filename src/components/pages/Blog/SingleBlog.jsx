@@ -40,13 +40,16 @@ function SingleBlog() {
 
   return (
     <>
-      <Container className="text-center">
+      <Container className="text-center container-lg">
         <Col>
           <h2>{blog.title.rendered}</h2>
 
-          <img className="blog_image" src={blog._embedded["wp:featuredmedia"]["0"].source_url} alt="test" />
-          <h4>{blog.slug}</h4>
-          <p>{blog.content.rendered}</p>
+          <div
+            className="singleblog_container"
+            dangerouslySetInnerHTML={{
+              __html: blog.content.rendered,
+            }}
+          />
         </Col>
       </Container>
     </>

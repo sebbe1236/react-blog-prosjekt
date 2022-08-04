@@ -3,3 +3,17 @@
 .blog_image {
   @include images;
 }
+
+.singleblog_container img {
+  @include images;
+}
+
+@media (max-width: 600px) {
+  .blogs_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .singleblog_container img {
+    height: 300px;
+  }
+}

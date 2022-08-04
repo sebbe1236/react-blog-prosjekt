@@ -4,6 +4,10 @@ nav a {
   @include nav;
 }
 
+nav {
+  background-color: #fe6e00 !important;
+}
+
 @media (max-width: 900px) {
   nav a {
     padding: 0px;

@@ -5,7 +5,7 @@ import Heading from "../../layout/Header";
 
 // breaking bad api: `https://www.breakingbadapi.com/api/characters?name=${query}` search funker med den.
 //`https://www.breakingbadapi.com/api/characters?name=${query}`
-//finn riktig endpoints for wp`apien for å funke med search, funksjonnene funker som de skal men endpoint`e for query er feil med wp.
+
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
