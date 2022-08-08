@@ -1,3 +1,5 @@
+@import "variables";
+
 .carousel-inner img {
   height: 400px;
 }
@@ -10,6 +12,15 @@ h4 {
 .articles_container p {
   max-width: 380px;
   margin: 0 auto;
+}
+
+.link {
+  @include headings;
+  text-decoration: none;
+}
+.link p {
+  @include headings;
+  text-decoration: none;
 }
 
 @media (max-width: 700px) {

@@ -25,3 +25,20 @@ $theme-colors: (
     font-size: 1.2em;
   }
 }
+
+@mixin text-alignment {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin headings {
+  h4,
+  h3,
+  p {
+    color: black;
+  }
+  &:hover {
+    font-weight: bold;
+  }
+}

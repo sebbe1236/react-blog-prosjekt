@@ -12,7 +12,7 @@ function BlogsContent({ data }) {
         <div className="blogs_container">
           {data.map((content) => {
             return (
-              <Col key={content.id} className="m-3 p-5">
+              <Col key={content.id} className="m-3 p-5 link">
                 <Link to={`/blog/${content.id}`}>
                   <h4>{content.title.rendered}</h4>
                   <img

@@ -1,50 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { BASE_URL } from "../../constants/api";
+import axios from "axios";
+import ArticlesContent from "./ArticlesContent";
 function Articles() {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const url = BASE_URL;
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const response = await axios.get(url);
+        console.log(response.data);
+        setArticles(response.data);
+      } catch (error) {
+        setError(error.toString());
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchArticles();
+  }, []);
+
+  if (loading) {
+    return <p>Loadiing....</p>;
+  }
+  if (error) {
+    return <p>An error occured</p>;
+  }
   return (
     <>
-      <Container>
-        <div className="articles_container">
-          <Row>
-            <Col>
-              <h3>Tenerife</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi voluptates laudantium
-                laboriosam ipsum cum iusto obcaecati vel pariatur harum maiores saepe numquam maxime accusamus,
-                aspernatur voluptatem doloremque dolorem facere.
-              </p>
-            </Col>
-            <Col>
-              <h3>Granca trip</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi voluptates laudantium
-                laboriosam ipsum cum iusto obcaecati vel pariatur harum maiores saepe numquam maxime accusamus,
-                aspernatur voluptatem doloremque dolorem facere.
-              </p>
-            </Col>
-          </Row>
-          <Row className="p-3">
-            <Col>
-              <h4>Some quick background!</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi voluptates laudantium
-                laboriosam ipsum cum iusto obcaecati vel pariatur harum maiores saepe numquam maxime accusamus,
-                aspernatur voluptatem doloremque dolorem facere.
-              </p>
-            </Col>
-            <Col>
-              <h4>Some quick background!</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi voluptates laudantium
-                laboriosam ipsum cum iusto obcaecati vel pariatur harum maiores saepe numquam maxime accusamus,
-                aspernatur voluptatem doloremque dolorem facere.
-              </p>
-            </Col>
-          </Row>
-        </div>
-      </Container>
+      <ArticlesContent data={articles} />
     </>
   );
 }
