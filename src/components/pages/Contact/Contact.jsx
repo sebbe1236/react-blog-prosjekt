@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Heading from "../../layout/Header";
 import { useForm } from "react-hook-form";
 function Contact() {
+  const [formSuccessMessage, SetSuccessMessage] = useState(false);
   const {
     register,
     handleSubmit,
@@ -10,8 +11,9 @@ function Contact() {
   } = useForm();
 
   const onSubmit = (data, e) => {
-    e.target.reset();
     console.log(data);
+    e.target.reset();
+    SetSuccessMessage(true);
   };
 
   return (
@@ -26,16 +28,16 @@ function Contact() {
           <div>
             <input
               {...register("lastName", { required: true, pattern: /^[A-Za-z]+$/i, minLength: 5 })}
-              placeholder="Enter your lastname"
+              placeholder="Enter your last name"
             />
-            {errors.lastName && <span>Must be over 5 charachters</span>}
+            {errors.lastName && <span>Must be over 5 characters</span>}
           </div>
           <div>
             <input
               {...register("subject", { required: true, pattern: /^[A-Za-z]+$/i, minLength: 7 })}
               placeholder="Enter subject"
             />
-            {errors.subject && <span>Must be over 5 charachters</span>}
+            {errors.subject && <span>Must be over 5 characters</span>}
           </div>
           <div>
             <textarea {...register("description", { required: true, minLength: 20 })} />
@@ -44,6 +46,7 @@ function Contact() {
           <input type="submit" />
         </form>
       </div>
+      {formSuccessMessage && <span>Form successfully sent</span>}
     </>
   );
 }

@@ -48,6 +48,7 @@ h4 {
 }
 .link:hover {
   font-weight: bold;
+  font-style: oblique;
 }
 
 .link p {
@@ -60,6 +61,7 @@ h4 {
 }
 .link p:hover {
   font-weight: bold;
+  font-style: oblique;
 }
 
 @media (max-width: 700px) {
@@ -112,15 +114,15 @@ form span {
 nav a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-style: italic;
   padding: 5px;
   transition-font-size: 3em;
   transition-color: black;
 }
 nav a:hover {
-  font-weight: bolder;
   color: black;
-  font-size: 1.2em;
+  font-style: italic;
+  font-weight: bold;
 }
 
 nav {

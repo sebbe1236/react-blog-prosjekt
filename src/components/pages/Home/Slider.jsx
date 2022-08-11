@@ -32,7 +32,7 @@ function Slider() {
   }
 
   if (error) {
-    return <h3>An error occured</h3>;
+    return <h3>An error happened</h3>;
   }
 
   return (

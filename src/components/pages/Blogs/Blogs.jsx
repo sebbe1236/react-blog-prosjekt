@@ -24,7 +24,7 @@ function Blogs() {
 
         setBlogs(results);
       } catch (err) {
-        console.log(err, "Funka ikkee");
+        console.log(err, "Shit");
         setError(err.toString());
       } finally {
         setLoading(false);
@@ -41,7 +41,7 @@ function Blogs() {
     return <h1>Loading.....</h1>;
   }
   if (error) {
-    return <p>Something went to shhit</p>;
+    return <p>Something went to shit</p>;
   }
 
   return (

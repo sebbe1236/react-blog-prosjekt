@@ -13,16 +13,17 @@ $theme-colors: (
 @mixin nav {
   text-decoration: none;
   color: black;
-  font-weight: bold;
+
+  font-style: italic;
   padding: 5px;
   transition: {
     font-size: 3em;
     color: black;
   }
   &:hover {
-    font-weight: bolder;
     color: black;
-    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
   }
 }
 
@@ -40,5 +41,6 @@ $theme-colors: (
   }
   &:hover {
     font-weight: bold;
+    font-style: oblique;
   }
 }

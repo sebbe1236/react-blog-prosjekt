@@ -32,7 +32,7 @@ function SingleBlog() {
   }, []);
 
   if (loading) {
-    return <p>LOadinng....</p>;
+    return <p>Loading....</p>;
   }
   if (error) {
     return <p>Fu wp api</p>;
