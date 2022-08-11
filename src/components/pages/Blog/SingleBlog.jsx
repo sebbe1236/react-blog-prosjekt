@@ -18,7 +18,6 @@ function SingleBlog() {
       try {
         const response = await axios.get(`https://exam1api.sebbeprojects.com/wp-json/wp/v2/posts/${id}?_embed`);
         const result = response.data;
-        console.log(result);
 
         setBlog(result);
       } catch (error) {

@@ -15,8 +15,7 @@ function Articles() {
     const fetchArticles = async () => {
       try {
         const response = await axios.get(url + "&per_page=3");
-        console.log(response.data);
-        console.log(url);
+
         setArticles(response.data);
       } catch (error) {
         setError(error.toString());
