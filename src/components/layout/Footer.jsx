@@ -6,7 +6,7 @@ function Footer() {
     <>
       <footer className="footer_container">
         <div>
-          <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h5>
+          <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h6>
         </div>
         <div className="links_container">
           <Link to="/">Home</Link>

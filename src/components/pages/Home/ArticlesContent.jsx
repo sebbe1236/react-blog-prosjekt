@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function ArticlesContent({ data }) {
   return (
     <>
+      <Heading heading="Some of the blogs" />
       <Container fluid>
-        <Row>
-          <Heading heading="Some of the blogs" />
+        <Row md={3} xs={1}>
           {data.map((article) => {
             return (
               <Col key={article.id}>

@@ -44,3 +44,10 @@ $theme-colors: (
     font-style: oblique;
   }
 }
+
+@mixin footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
