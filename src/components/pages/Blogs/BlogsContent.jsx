@@ -6,7 +6,8 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 /**
  * Source used to find a solution for displaying a message if no search result found: https://www.kindacode.com/article/how-to-create-a-filter-search-list-in-react/
- *
+ * Had to do a conditional render check to see if the returned value of data is greater then 0 it will display the content.
+ * if not display the empty message
  */
 function BlogsContent({ data }) {
   return (
